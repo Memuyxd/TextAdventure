@@ -1,38 +1,16 @@
 import java.util.Scanner;
 
 public class GameLogic {
+public static int act = 1;
+        public static int encountersEngaged = 0;
     static Scanner scanner = new Scanner(System.in);
 
     public class PlayerHealth {
 
         double totalHealth;
-        
+
         int attackStat;
         int defenseStat;
-
-        public double getTotalHealth() {
-            return totalHealth;
-        }
-
-        public void setTotalHealth(double totalHealth) {
-            this.totalHealth = totalHealth;
-        }
-
-        public int getAttackStat() {
-            return attackStat;
-        }
-
-        public void setAttackStat(int attackStat) {
-            this.attackStat = attackStat;
-        }
-
-        public int getDefenseStat() {
-            return defenseStat;
-        }
-
-        public void setDefenseStat(int defenseStat) {
-            this.defenseStat = defenseStat;
-        }
 
         public static final int EMOTIONAL_DAMAGE = 1;
         public static final int RUSSIAN_HAND_SLAP = 1;
@@ -70,12 +48,21 @@ public class GameLogic {
         System.out.println("\n Enter anything to continue...");
         scanner.next();
     }
+    public static void checkAct(){
+
+        if(act == 1 && encountersEngaged == 1 ) {
+
+        act = 2;
+            Lore.FirstAct();}
+    }
     public static void characterInfo() {
             clearConsole();
         System.out.println("======Character Info======");
         System.out.println("HP:" + currentHealth + "/" + totalHealth);
         printSeperator(20);
         System.out.println();
+
+        GameLogic.AnythingToContinue();
 
     }
     //prints menu
