@@ -6,18 +6,23 @@ class TextAdventure {
 
         System.out.println("\n \n \n \n \n \n \n");
         System.out.println("Welcome to Mushroom Problem Solver!");
+
+                //PRINTS INTRO OF STORY
         Lore.printIntro();
         System.out.println("Select your class \n   (1) Mage (2) Jester");
         int characterSelect = scanner.nextInt();
 
         if (characterSelect == 1) {
+            //PRINTS MAGE INTRO
             Lore.printMage();
 
         } else if (characterSelect == 2) {
+            //PRINTS JESTER INTRO
             Lore.printJester();
 
 
         } else{ System.out.println("Wrong Input!");
+            //shuts game down if wrong input
         System.exit(0);}
         GameLogic.AnythingToContinue();
         GameLogic.clearConsole();
