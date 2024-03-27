@@ -17,6 +17,9 @@ public class PlayerJester extends Character {
         super();
     }
 
+    public PlayerJester(String name) {
+    }
+
     @Override
     public int attack() {
         return 0;

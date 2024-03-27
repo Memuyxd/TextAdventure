@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class GameLogic {
+    static PlayerJester player;
 public static int act = 1, place = 0;
     double totalHealth;
 
@@ -64,6 +65,33 @@ public static int readInt(String prompt, int userChoices){
         System.out.println("\n Enter anything to continue...");
         scanner.next();
     }
+        public static void startGame(){
+            boolean nameSet = false;
+            String name;
+            //print title
+        clearConsole();
+        printSeperator(20);
+        printSeperator(20);
+            System.out.println("EVIL MUSHROOM PROBLEM");
+            printSeperator(20);
+            printSeperator(20);
+            AnythingToContinue();
+            do {
+                clearConsole();
+                printHeading("Enter your name  ");
+                name = scanner.next();
+                printHeading("Your name is " + name + "?" + "\n is that correct?");
+                System.out.println("(1) Yes");
+                System.out.println("(2) No");
+                int input = readInt("-> ", 2);
+                if (input == 1)
+                    nameSet = true;
+
+            }while(!nameSet);
+            //player object
+            player = new PlayerJester(name);
+        }
+
     public static void checkAct(){
 
         if(act == 1 && encountersEngaged == 1 ) {
