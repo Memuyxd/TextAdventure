@@ -13,10 +13,12 @@ class TextAdventure {
         int characterSelect = scanner.nextInt();
 
         if (characterSelect == 1) {
+            PlayerMage player = new PlayerMage();
             //PRINTS MAGE INTRO
             Lore.printMage();
 
         } else if (characterSelect == 2) {
+            PlayerJester player = new PlayerJester();
             //PRINTS JESTER INTRO
             Lore.printJester();
 
