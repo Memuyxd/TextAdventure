@@ -1,8 +1,8 @@
 public class Lore {
-    public static void printIntro (){
+    public static void printIntro() {
         GameLogic.clearConsole();
         GameLogic.printSeperator(30);
-        System.out.println("Intro");
+        GameLogic.printHeading("Intro: Prologue");
         GameLogic.printSeperator(30);
         System.out.println("  ~         ~~          __\n" +
                 "       _T      .,,.    ~--~ ^^\n" +
@@ -20,8 +20,10 @@ public class Lore {
         System.out.println("Soon after, the people of Villa became sick with the mushroom disease.");
         System.out.println("The Village chief asks you to find the root cause of this situation.");
         GameLogic.printSeperator(40);
+        GameLogic.AnythingToContinue();
     }
-    public static void printJester (){
+
+    public static void printJester() {
         System.out.println("▓▓▓▓▓▓▓▓▓▓▓▓████████████████████████████▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░░░█▓▓▓▓▓▓▓▓▓\n" +
                 "▓▓▓▓▓▓▓▓▓▓█████████████████████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓░░░░█▓▓▓▓▓▓▓▓▓\n" +
                 "▓▓▓▓▓▓▓▓▓█████████████████████████████████▓░░░░░░░░░░░░░░░▒▓███▓░░░░░░░░░░░▓▓░░░█▓▓▓▓▓▓▓▓▓\n" +
@@ -55,9 +57,13 @@ public class Lore {
                 "▓███▒░░▒████████▓▓▓▓▓▓▓▓▓▓███████████▓▒▓▓▓▓▒░░░░░░░░░░▒▓▒░░░░░░░▒██████▓▓▓▓▓▓▓▓▓▓▓██▓▓▒░░░\n" +
                 "▓▓████▒░░▓██████▓▓▓▓▓▓▓▓██████▓▓▓▓▓███████▓▒▒░░░░░░░░░░░░░░░░░▒▓███████▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▒░░\n" +
                 "▓▓██████▒░░▓███▓▓▓▓▓▓▓███▓▓▓▓▓▓▓▓▓▓▓▓██████████▓▒▒░░░░░▒▒▒▓▓▓▓█████████▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓▓░");
-        System.out.println("You are a Jester!");
+        GameLogic.printHeading("You are a Jester");
+        GameLogic.printSeperator(20);
+
         System.out.println("You have a base stat of: 200HP");
+        GameLogic.printSeperator(20);
         GameLogic.AnythingToContinue();
+
         GameLogic.clearConsole();
         System.out.println("  ~         ~~          __\n" +
                 "       _T      .,,.    ~--~ ^^\n" +
@@ -76,7 +82,8 @@ public class Lore {
                 "/|\\\n" +
                 " /\\");
     }
-    public static void FirstAct(){
+
+    public static void FirstAct() {
         GameLogic.clearConsole();
         GameLogic.printSeperator(30);
         System.out.println("First Act");

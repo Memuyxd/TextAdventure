@@ -1,23 +1,20 @@
-public class PlayerJester extends Character {
+import java.util.Scanner;
+
+public class Player extends Character {
+    Scanner scanner = new Scanner(System.in);
     public int numAtkUpgrades, numDefUpgrades;
     //skill array
-    public String[] atkUpgrades = {"Killing Joke", "Mocking Laughter", "Fool's Fury", "Finale"};
-    public String[] defUpgrades = {"Tricksters Shuffle", "Jester's Resilience", "Harlequin's Harmony", "Fool's Fortune"};
-    public PlayerJester(String name, int maxHp, int hp) {
-        super(name, maxHp, hp);
+    public String[] atkUpgrades = {"Fool's Fury", "Mocking Laughter", "Fool's Fury", "Finale"};
+    public String[] defUpgrades = {"Whimsical Resilience", "Jester's Resilience", "Harlequin's Harmony", "Fool's Fortune"};
+
+    public Player(String name) {
+        super(name, 200, 0);
 
         //setting # of upgrades to 0
         this.numAtkUpgrades = 0;
         this.numDefUpgrades = 0;
         //let them choose traits
-        chooseJesterTrait();
-    }
-
-    public PlayerJester() {
-        super();
-    }
-
-    public PlayerJester(String name) {
+        chooseTrait();
     }
 
     @Override
@@ -29,20 +26,21 @@ public class PlayerJester extends Character {
     public int defend() {
         return 0;
     }
+
     //trait selection
-    public void chooseJesterTrait(){
+    public void chooseTrait() {
         GameLogic.clearConsole();
-        System.out.println("Choose A Trait");
+        GameLogic.printHeading("Choose A Trait");
         System.out.println("(1) " + atkUpgrades[numAtkUpgrades]);
         System.out.println("(2) " + defUpgrades[numDefUpgrades]);
-        int input = GameLogic.readInt("-> ", 2);
+        int input = GameLogic.readInt("->", 2);
         GameLogic.clearConsole();
         //offensive and defensive selection case
-        if(input == 1) {
+        if (input == 1) {
             System.out.println("You chose " + atkUpgrades[numAtkUpgrades]);
             numAtkUpgrades++;
 
-        }else{
+        } else {
             System.out.println("You chose " + defUpgrades[numDefUpgrades]);
             numDefUpgrades++;
         }
