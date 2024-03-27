@@ -1,6 +1,5 @@
 public class Lore {
     public static void printIntro (){
-        double totalHealth = 100;
         GameLogic.clearConsole();
         GameLogic.printSeperator(30);
         System.out.println("Intro");
@@ -57,7 +56,7 @@ public class Lore {
                 "▓▓████▒░░▓██████▓▓▓▓▓▓▓▓██████▓▓▓▓▓███████▓▒▒░░░░░░░░░░░░░░░░░▒▓███████▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▒░░\n" +
                 "▓▓██████▒░░▓███▓▓▓▓▓▓▓███▓▓▓▓▓▓▓▓▓▓▓▓██████████▓▒▒░░░░░▒▒▒▓▓▓▓█████████▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓▓░");
         System.out.println("You are a Jester!");
-        System.out.println("You have a base stat of: 100HP");
+        System.out.println("You have a base stat of: 200HP");
         GameLogic.AnythingToContinue();
         GameLogic.clearConsole();
         System.out.println("  ~         ~~          __\n" +
@@ -124,5 +123,14 @@ public class Lore {
                 "/|\\\n" +
                 " /\\");
 
+    }
+    public static void FirstAct(){
+        GameLogic.clearConsole();
+        GameLogic.printSeperator(30);
+        System.out.println("First Act");
+        GameLogic.printSeperator(30);
+        System.out.println("You heard from a traveling merchant that a suspicous man had wandered into the forest not too long ago.");
+        System.out.println("He was said to have been carrying a large bag and was in a hurry.");
+        System.out.println("You decided to investigate the forest.");
     }
 }
